@@ -29,6 +29,10 @@ public class Master {
         this.timestamp = timestamp;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getUsername() {
         return username;
     }

@@ -1,6 +1,7 @@
 package com.ggapp.service;
 
 import com.ggapp.entity.Category;
+import com.ggapp.entity.Chamber;
 
 import java.util.List;
 
@@ -9,8 +10,11 @@ import java.util.List;
  */
 public interface ChamberService {
     // GETS
+    Chamber getChamber(long id);
+    List<Chamber>  getChambers();
     List<Category> getCategories();
 
     // POSTS
-    Category addCategory(Category category);
+    Chamber  addChamber  (Chamber chamber);
+    Category addCategory (Category category);
 }

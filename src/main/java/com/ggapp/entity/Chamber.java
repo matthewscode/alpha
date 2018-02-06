@@ -20,7 +20,11 @@ public class Chamber {
     private Master master;
 
     @OneToMany
-    private List<Mark> markList;
+    private List<Cue> cueList;
+
+    public Long getId() {
+        return id;
+    }
 
     public Master getMaster() {
         return master;
@@ -46,11 +50,11 @@ public class Chamber {
         this.description = description;
     }
 
-    public List<Mark> getMarkList() {
-        return markList;
+    public List<Cue> getCueList() {
+        return cueList;
     }
 
-    public void setMarkList(List<Mark> markList) {
-        this.markList = markList;
+    public void setCueList(List<Cue> cueList) {
+        this.cueList = cueList;
     }
 }

@@ -1,12 +1,12 @@
 package com.ggapp.dao;
 
-import com.ggapp.entity.Article;
+import com.ggapp.entity.Chamber;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * Created by Matthew on 11/7/2017.
+ * Created by Matthew on 11/18/2017.
  */
 @Repository
-public interface ArticleDao extends JpaRepository<Article, Long> {
+public interface ChamberDao extends JpaRepository<Chamber, Long> {
 }

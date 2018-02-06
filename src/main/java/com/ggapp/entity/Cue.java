@@ -1,12 +1,14 @@
 package com.ggapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 /**
  * Created by Matthew on 11/18/2017.
  */
 @Entity
-public class Mark {
+public class Cue {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
@@ -15,11 +17,18 @@ public class Mark {
     @JoinColumn(name = "category")
     private Category category;
 
-    private String location;
+    private String fileName;
+
+    private String text;
 
     @ManyToOne
-    @JoinColumn(name = "chamber_configuration")
+    @JsonIgnore
+    @JoinColumn(name = "chamber")
     private Chamber chamber;
+
+    public Long getId() {
+        return id;
+    }
 
     public Category getCategory() {
         return category;
@@ -37,11 +46,19 @@ public class Mark {
         this.chamber = chamber;
     }
 
-    public String getLocation() {
-        return location;
+    public String getfileName() {
+        return fileName;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setfileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

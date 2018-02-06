@@ -23,7 +23,7 @@ public class Article {
     public Article(){}
 
     public Article(Master master, String title, String text, long timestamp) {
-        this.master = master;
+        this.master    = master;
         this.title     = title;
         this.text      = text;
         this.timestamp = timestamp;
